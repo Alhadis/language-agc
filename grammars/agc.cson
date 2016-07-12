@@ -8,14 +8,15 @@ repository:
 	# Top-level patterns
 	main:
 		patterns: [
-			{include: "#comments"}
+			{include: "#comment"}
+			{include: "#number"}
 			{include: "#inclusion"}
 			{include: "#identifier"}
 			{include: "#opcode"}
 		]
 	
 	# Comments
-	comments:
+	comment:
 		patterns: [{
 			
 			# Comment-lines
@@ -28,13 +29,13 @@ repository:
 				match: "TODO|FIXME|CHANGED|XXX|IDEA|HACK|NOTE|REVIEW|NB|BUG"
 				name: "disable-todo"
 			]
-		},{
-			
-			# Numeric comment prefixed to some rows ("+110", "-1", etc)
-			name: "comment.note.numeric.agc"
-			match: '^\\t([+-]\\d+)'
 		}]
 	
+	
+	# Numeric literal
+	number:
+		name: "constant.numeric.agc"
+		match: "[-+]\\d+(?:\\.\\d+)?D?"
 	
 	
 	# Include directive
