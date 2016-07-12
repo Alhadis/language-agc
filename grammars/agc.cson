@@ -10,19 +10,29 @@ repository:
 		patterns: [
 			{include: "#comments"}
 			{include: "#inclusion"}
+			{include: "#identifier"}
 		]
 	
-	# Comment-lines
+	# Comments
 	comments:
-		name: "comment.line.number-sign.agc"
-		begin: "#"
-		end:   "$"
-		beginCaptures:
-			0: name: "punctuation.definition.comment.agc"
-		patterns: [
-			match: "XXX"
-			name: "meta.placeholder-coords.agc"
-		]
+		patterns: [{
+			
+			# Comment-lines
+			name: "comment.line.number-sign.agc"
+			begin: "#"
+			end:   "$"
+			beginCaptures:
+				0: name: "punctuation.definition.comment.agc"
+				patterns: [
+					match: "XXX"
+					name: "meta.placeholder-coords.agc"
+				]
+		},{
+			
+			# Numeric comment prefixed to some rows ("+110", "-1", etc)
+			name: "comment.note.numeric.agc"
+			match: '^\\t([+-]\\d+)'
+		}]
 	
 	
 	
@@ -33,3 +43,9 @@ repository:
 		end: "(?=\\s)"
 		beginCaptures:
 			0: name: "punctuation.definition.directive.agc"
+
+
+	# Programmar-defined name, such as a label or constant
+	identifier:
+		name: "entity.name.identifier.agc"
+		match: "^(?!\\$)(?:[^#\\s]{1,7}\\t|[^#\\s]{8})"
