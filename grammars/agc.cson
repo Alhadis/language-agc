@@ -56,7 +56,7 @@ repository:
 	# Opcode
 	opcode:
 		name: "meta.opcode.agc"
-		begin: "(?<=\\t)([^#\\s]+)(?=\\t|$)"
+		begin: "(?<=\\t)([^#\\s]+)(?=\\s|$)"
 		end: "$|(?=#)|[^#\\s]+"
 		beginCaptures: 1: name: "keyword.function.opcode.agc"
 		endCaptures:   0: name: "variable.parameter.operand.agc"
