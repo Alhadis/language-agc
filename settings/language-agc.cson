@@ -1,0 +1,4 @@
+".source.agc":
+	editor:
+		commentStart: "# "
+		tabLength: 8
