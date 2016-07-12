@@ -11,6 +11,7 @@ repository:
 			{include: "#comments"}
 			{include: "#inclusion"}
 			{include: "#identifier"}
+			{include: "#opcode"}
 		]
 	
 	# Comments
@@ -49,3 +50,12 @@ repository:
 	identifier:
 		name: "entity.name.identifier.agc"
 		match: "^(?!\\$)(?:[^#\\s]{1,7}\\t|[^#\\s]{8})"
+
+	
+	# Opcode
+	opcode:
+		name: "meta.opcode.agc"
+		begin: "(?<=\\t)([^#\\s]+)(?=\\t|$)"
+		end: "$|(?=#)|[^#\\s]+"
+		beginCaptures: 1: name: "keyword.function.opcode.agc"
+		endCaptures:   0: name: "variable.parameter.operand.agc"
