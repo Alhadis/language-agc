@@ -29,6 +29,11 @@ repository:
 				match: "TODO|FIXME|CHANGED|XXX|IDEA|HACK|NOTE|REVIEW|NB|BUG"
 				name: "disable-todo"
 			]
+		},{
+			
+			# Annotations
+			name: "comment.annotation.numeric.agc"
+			match: "^\\t[-+]\\d+(?=\\t)"
 		}]
 	
 	
