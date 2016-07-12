@@ -23,10 +23,10 @@ repository:
 			end:   "$"
 			beginCaptures:
 				0: name: "punctuation.definition.comment.agc"
-				patterns: [
-					match: "XXX"
-					name: "meta.placeholder-coords.agc"
-				]
+			patterns: [
+				match: "TODO|FIXME|CHANGED|XXX|IDEA|HACK|NOTE|REVIEW|NB|BUG"
+				name: "disable-todo"
+			]
 		},{
 			
 			# Numeric comment prefixed to some rows ("+110", "-1", etc)
