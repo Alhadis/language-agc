@@ -1,4 +1,4 @@
-name: "Apollo-11 Guidance Computer Assembly"
+name: "Apollo Guidance Computer"
 scopeName: "source.agc"
 fileTypes: ["agc"]
 patterns: [include: "#main"]
