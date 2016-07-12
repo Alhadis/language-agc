@@ -1,6 +1,6 @@
 {
 	"name": "language-agc",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Syntax highlighting for Apollo Guidance Computer (AGC) assembly code",
 	"keywords": ["Apollo-11", "NASA", "Space", "Assembly", "ASM", "Assembler", "Moon Landing", "Astronauts"],
 	"repository": "https://github.com/Alhadis/language-agc",
