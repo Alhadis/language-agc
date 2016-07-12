@@ -9,6 +9,7 @@ repository:
 	main:
 		patterns: [
 			{include: "#comments"}
+			{include: "#inclusion"}
 		]
 	
 	# Comment-lines
@@ -18,5 +19,17 @@ repository:
 		end:   "$"
 		beginCaptures:
 			0: name: "punctuation.definition.comment.agc"
+		patterns: [
+			match: "XXX"
+			name: "meta.placeholder-coords.agc"
+		]
 	
-		
+	
+	
+	# Include directive
+	inclusion:
+		name: "meta.preprocessor.include.directive.agc"
+		begin: "^\\$"
+		end: "(?=\\s)"
+		beginCaptures:
+			0: name: "punctuation.definition.directive.agc"
