@@ -1,3 +1,22 @@
 name: "Apollo-11 Guidance Computer Assembly"
 scopeName: "source.agc"
 fileTypes: ["agc"]
+patterns: [include: "#main"]
+
+repository:
+	
+	# Top-level patterns
+	main:
+		patterns: [
+			{include: "#comments"}
+		]
+	
+	# Comment-lines
+	comments:
+		name: "comment.line.number-sign.agc"
+		begin: "#"
+		end:   "$"
+		beginCaptures:
+			0: name: "punctuation.definition.comment.agc"
+	
+		
