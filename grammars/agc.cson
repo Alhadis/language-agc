@@ -30,7 +30,6 @@ repository:
 				name: "disable-todo"
 			]
 		},{
-			
 			# Annotations
 			name: "comment.annotation.numeric.agc"
 			match: "^\\t[-+]\\d+(?=\\t)"
